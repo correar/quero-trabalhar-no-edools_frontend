@@ -1,0 +1,78 @@
+screen-desktop-large = 1200px
+screen-desktop = 992px
+screen-tablet = 768px
+screen-mobile = 480px 
+
+container-desktop-large = 950px
+container-desktop = 728px
+container-tablet = 440px
+container-mobile = 100%
+  
+*
+  box-sizing: border-box
+
+body
+  font-family Arial, Helvetica, sans-serif 
+
+.App
+  width 100%
+  display table
+  margin auto auto
+
+.titleRow
+  width 100%
+  background-color #1a1a1a
+  color #ffffff
+  font-width bold
+  display table
+
+.titleName
+  float left
+  width 50%
+  padding 20px
+
+.row:after
+  content ""
+  display table
+  clear both
+
+.Dados
+  float left
+  width 50%
+  padding 20px
+
+.Dados:hover
+  background-color #a6a6a6
+
+.row:nth-child(odd)
+  background-color #f2f2f2
+.row:nth-child(even)
+  background-color #ffffff
+
+@media screen and (max-width: screen-desktop-large)
+  .Dados
+    width 50%
+  .App
+    width container-desktop-large
+
+@media screen and (max-width: screen-desktop)
+  .Dados
+    width 50%
+  .App
+    width container-desktop
+
+@media screen and (max-width: screen-tablet)
+  .Dados
+    width 100%
+  .App
+    width container-tablet
+  .titleRow
+    display none
+
+@media screen and (max-width: screen-mobile)
+  .Dados
+    width 100%
+  .App
+    width container-mobile
+  .titleRow
+    display none
