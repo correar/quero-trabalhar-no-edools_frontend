@@ -1,0 +1,86 @@
+screen-desktop-large = 1200px
+screen-desktop = 992px
+screen-tablet = 768px
+screen-mobile = 480px 
+
+container-desktop-large = 950px
+container-desktop = 728px
+container-tablet = 440px
+container-mobile = 100%
+  
+*
+  box-sizing: border-box
+
+body
+  font-family Arial, Helvetica, sans-serif 
+
+.ListStatus
+  width 100%
+  display table
+  margin auto auto
+
+.ListStatus .TitleRow
+  width 100%
+  background-color #1a1a1a
+  color #ffffff
+  font-width bold
+  display table
+
+.ListStatus .TitleName
+  float left
+  width 20%
+  padding 20px
+
+.ListStatus .Row:after
+  content ""
+  display table
+  clear both
+
+.ListStatus .Data
+  float left
+  width 20%
+  padding 20px
+
+.ListStatus .Data:hover
+  background-color #a6a6a6
+
+.ListStatus .Row:nth-child(odd)
+  background-color #f2f2f2
+
+.ListStatus .Row:nth-child(even)
+  background-color #ffffff
+
+.ListStatus .TitleData
+  display none
+
+@media screen and (max-width: screen-desktop-large)
+  .ListStatus .Data
+    width 20%
+  .ListStatus
+    width container-desktop-large
+
+@media screen and (max-width: screen-desktop)
+  .ListStatus .Data
+    width 20%
+  .ListStatus
+    width container-desktop
+
+@media screen and (max-width: screen-tablet)
+  .ListStatus .Data
+    width 100%
+  .ListStatus
+    width container-tablet
+  .ListStatus .TitleRow
+    display none
+  .ListStatus .TitleData
+    display inline
+
+@media screen and (max-width: screen-mobile)
+  .ListStatus .Data
+    width 100%
+  .ListStatus
+    width container-mobile
+  .ListStatus .TitleRow
+    display none
+  .ListStatus .TitleData
+    display inline

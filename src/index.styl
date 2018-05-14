@@ -1,0 +1,108 @@
+screen-desktop-large = 1200px
+screen-desktop = 992px
+screen-tablet = 768px
+screen-mobile = 480px 
+
+container-desktop-large = 950px
+container-desktop = 728px
+container-tablet = 440px
+container-mobile = 100%
+
+body
+  background-color #FFCC00
+  padding 20px
+  margin 0
+
+h1, h2, p, ul, li
+  font-family sans-serif
+
+ul.header li
+  display inline
+  list-style-type none
+  margin 0
+
+ul.header
+  background-color #111
+  padding 0
+
+ul.header li a
+  color #FFF
+  font-weight bold
+  text-decoration none
+  padding 20px
+  display inline-block
+
+ol
+    counter-reset item;
+    padding-left 10px;
+
+ol li 
+    display block
+
+ol li:before 
+    content counters(item, ".") " "
+    counter-increment item
+
+content
+  background-color #FFF
+  padding 20px
+
+content h2
+  padding 0
+  margin 0
+
+content li
+  margin-botton 10px
+
+.active
+  background-color #0099FF
+
+.btn-success 
+  width 110px
+  height 40px
+  padding 14px 14px
+  border 0 none
+  font-weight 700
+  letter-spacing 1px
+  text-transform uppercase
+  background-color #29a329
+  cursor pointer
+  color #ffffff
+
+.btn-success:hover
+  background-color #145214
+
+.btn-sucess:focus
+  outline 0 none
+
+.btn-danger
+  width 110px
+  height 40px
+  padding 14px 14px
+  border 0 none
+  font-weight 700
+  letter-spacing 1px
+  text-transform uppercase
+  background-color #ff4d4d
+  cursor pointer
+  color #ffffff
+
+.btn-danger:hover
+  background-color #e60000
+
+.btn-danger:focus
+  outline 0 none
+
+/*@media screen and (max-width: screen-desktop-large)
+
+@media screen and (max-width: screen-desktop)*/
+
+@media screen and (max-width: screen-tablet)
+	ul.header li a
+		display block
+
+@media screen and (max-width: screen-mobile)
+	ul.header li a
+		display block
+
+

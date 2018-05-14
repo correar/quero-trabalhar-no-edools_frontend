@@ -11,13 +11,13 @@ class ListAll extends Component{
   }
   componentDidMount()
   {   
-    //fetch('https://facebook.github.io/react-native/movies.json').
-    fetch('https://core.myedools.info/features', {
+    const options = {
       method: 'get',
       headers: new Headers({
         'Authorization': 'Token 06a8e7ebfe3cb1c6d316edfc87a274ab:c42214a737df45d82aa274247841204d',
       }),
-    }).
+    }
+    fetch('https://core.myedools.info/features', options).
     then((Response)=>Response.json()).
     then((findresponse)=>
     {
@@ -30,16 +30,17 @@ class ListAll extends Component{
   render()
   {
     return(
-      <div className="App">
-        <div className="titleRow">
-          <div className="titleName">ID</div>
-          <div className="titleName">Feature</div>
+      <div className="ListAll">
+        <h2>Lista de todos Aplicativos Disponíveis</h2>
+        <div className="TitleRow">
+          <div className="TitleName">ID</div>
+          <div className="TitleName">Feature</div>
         </div>    
         {
           this.state.data.map((dynamicData,key) =>
-            <div className="row" key={key}>
-              <div className="Dados">{dynamicData.id}</div>
-              <div className="Dados">{dynamicData.feature_key}</div>
+            <div className="Row" key={key}>
+              <div className="Data"><div className="TitleData">ID: </div>{dynamicData.id}</div>
+              <div className="Data"><div className="TitleData">Feature: </div>{dynamicData.feature_key}</div>
             </div>
           )
           
@@ -49,4 +50,4 @@ class ListAll extends Component{
   }
 }
 
-export default App;
+export default ListAll;

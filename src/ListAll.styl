@@ -14,65 +14,73 @@ container-mobile = 100%
 body
   font-family Arial, Helvetica, sans-serif 
 
-.App
+.ListAll
   width 100%
   display table
   margin auto auto
 
-.titleRow
+.ListAll .TitleRow
   width 100%
   background-color #1a1a1a
   color #ffffff
   font-width bold
   display table
 
-.titleName
+.ListAll .TitleName
   float left
   width 50%
   padding 20px
 
-.row:after
+.ListAll .Row:after
   content ""
   display table
   clear both
 
-.Dados
+.ListAll .Data
   float left
   width 50%
   padding 20px
 
-.Dados:hover
+.ListAll .Data:hover
   background-color #a6a6a6
 
-.row:nth-child(odd)
+.ListAll .Row:nth-child(odd)
   background-color #f2f2f2
-.row:nth-child(even)
+
+.ListAll .Row:nth-child(even)
   background-color #ffffff
 
+.ListAll .TitleData
+  display none
+
 @media screen and (max-width: screen-desktop-large)
-  .Dados
+  .ListAll .Data
     width 50%
-  .App
+  .ListAll
     width container-desktop-large
 
 @media screen and (max-width: screen-desktop)
-  .Dados
+  .ListAll .Data
     width 50%
-  .App
+  .ListAll
     width container-desktop
 
 @media screen and (max-width: screen-tablet)
-  .Dados
+  .ListAll .Data
     width 100%
-  .App
+  .ListAll
     width container-tablet
-  .titleRow
+  .ListAll .TitleRow
     display none
+  .ListAll .TitleData
+    display inline
 
 @media screen and (max-width: screen-mobile)
-  .Dados
+  .ListAll .Data
     width 100%
-  .App
+  .ListAll
     width container-mobile
-  .titleRow
+  .ListAll .TitleRow
     display none
+  .ListAll .TitleData
+    display inline
